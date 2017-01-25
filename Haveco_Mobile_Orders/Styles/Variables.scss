@@ -1,0 +1,24 @@
+﻿$font-family: Arial, Helvetica, sans-serif;
+//$font-family: Verdana;
+$font-size: 13px;
+$font-section-size: 14px;
+$font-section-color: #365899;
+
+$padding-default: 5px;
+$margin-default: 5px;
+
+
+$row--header-padding: 15px;
+$row__label-width: 200px;
+$row__data-width: 400px;
+$row-width: $row__label-width + $row__data-width + (4 * $padding-default) + $margin-default; // label cell + data cell + padding left and right from both cells + default margin
+
+$table-row-width: $row__label-width + $row__data-width + (2 * $padding-default) + $margin-default; // label cell + data cell + padding left and right from all cells + default margin
+
+$row--singleline-height: 30px;
+
+$icon-size: 16px;
+
+$sidebyside-element-margin: 150px;
+
+$border-color-default: #707070;

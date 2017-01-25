@@ -1,0 +1,64 @@
+﻿@import 'Fonts.scss'; 
+
+%element-default
+{
+    @extend %font-data;
+
+    padding: $padding-default;
+    margin: 0;
+    margin-top: -$margin-default;
+	vertical-align: baseline;
+	
+    font-size: 100%;
+	font: inherit;
+
+    height: 30px;
+    box-sizing: border-box;
+}
+
+%element-select
+{
+    select
+    {
+        @extend %element-default;
+        width: 100%;
+    }
+}
+
+%element-text
+{
+    input[type=text], input[type=number]
+    {
+        @extend %element-default;
+        width: 100%;
+    }
+}
+
+%element-date
+{
+    input[type=date], input[type=week]
+    {
+        @extend %element-default;
+    }
+}
+
+%element-textarea
+{
+    textarea
+    {
+        @extend %element-default;
+
+        height: (4 * $row--singleline-height);
+        width: $row__label-width + $row__data-width + $padding-default + $margin-default;
+    }
+}
+
+%element-button
+{
+    input[type=button]
+    {
+        @extend %element-default;
+        
+    }
+
+}

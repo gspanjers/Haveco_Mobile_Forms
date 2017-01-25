@@ -1,0 +1,247 @@
+﻿@import 'Elements.scss'; 
+
+.background
+{
+    background-color:#f5f7fa
+}
+
+.row //block
+{
+    display: block;
+    width: $row-width; 
+
+    &--single-line // modifier of the block
+    {
+        height: $row--singleline-height;
+        padding: $padding-default;
+    }
+
+    &--header
+    {
+        padding-top: $row--header-padding !important;
+    }
+
+    &--multi-line
+    {
+        height: (5 * $row--singleline-height);
+        padding: $padding-default;
+    }
+
+    &--section
+    {
+        @extend %font-section;
+
+        font-size: $font-section-size;
+        padding: $padding-default;
+        margin-top: $margin-default;
+        border-bottom: 1px solid #e9ebee;
+
+        &__image
+        {
+            width: $icon-size; 
+            height: $icon-size; 
+            float: right;
+            cursor: pointer;
+            margin-top: -$margin-default;
+        }
+    }
+
+    &__label // element
+    {
+        @extend %font-label;     
+
+        margin-left: $margin-default;   
+        padding: $padding-default;
+        width: $row__label-width;
+        float: left;
+    }
+
+    &__label-stacked
+    {
+        @extend %font-label;
+
+        margin-left: $margin-default; 
+        padding: $padding-default;
+        width: 100%;
+    }
+
+    &__data // element
+    {
+        @extend %font-data;
+
+        padding: $padding-default;
+        width: $row__data-width;
+        float: right;
+        word-wrap: break-word;
+    }
+
+    &__data-stacked
+    {
+        @extend %font-data;
+
+        margin-left: $margin-default;
+        padding: $padding-default;
+        width: 100%;
+        word-wrap: break-word;
+    }
+
+    .sidebyside--element-padding
+    {
+        margin-left: $sidebyside-element-margin;
+    }
+   
+    @extend %element-select;
+    @extend %element-text;
+    @extend %element-date;
+    @extend %element-textarea;
+
+    &__radiobutton-padding
+    {
+        margin-left: floor($row-width / 4);
+    }
+}
+
+.order-list
+{
+    @extend %font-label;
+
+    display: block;
+    width: $row-width; // label cell + data cell + padding left and right from both cells + default margin
+    padding: $padding-default;
+
+    &__table
+    {
+        border: none;
+        border-spacing: 0px;
+        border-collapse: collapse;
+        padding: $padding-default;
+        margin-left: $margin-default;
+
+        &--column-large
+        {
+            width: (($table-row-width / 5) * 3) + $padding-default;
+            max-width: (($table-row-width / 5) * 3) + $padding-default;
+        }
+
+        &--column-small
+        {
+            width: ($table-row-width / 5);
+            max-width: ($table-row-width / 5);
+        }
+
+        &--header
+        {
+            @extend %font-label;
+
+            padding: $padding-default;
+        }
+
+        &--cell
+        {
+            padding: 5px;
+            vertical-align: top;
+        }
+
+        &__textarea
+        {
+            @extend %element-default;
+
+            width: 100%;
+        }
+
+    }
+
+    @extend %element-text;
+}
+
+.button
+{
+    margin-left: $margin-default * 2;
+    border: 1px solid $border-color-default;
+    height: 30px;
+
+    &--full
+    {
+        text-align: center;
+        margin-right: $margin-default;
+
+        background: #8c8c8c;
+        background: -webkit-gradient(linear, left top, left bottom, from(#a6a6a6), to(#8c8c8c));
+        background: -webkit-linear-gradient(top, #a6a6a6, #8c8c8c);
+        background: -moz-linear-gradient(top, #a6a6a6, #8c8c8c);
+        background: -ms-linear-gradient(top, #a6a6a6, #8c8c8c);
+        background: -o-linear-gradient(top, #a6a6a6, #8c8c8c);
+        -webkit-border-radius: 0px;
+        -moz-border-radius: 0px;
+        border-radius: 0px;
+        -webkit-box-shadow: rgba(0,0,0,1) 0 1px 0;
+        -moz-box-shadow: rgba(0,0,0,1) 0 1px 0;
+        box-shadow: rgba(0,0,0,1) 0 1px 0;
+        text-shadow: rgba(0,0,0,.4) 0 1px 0;
+        color: white;
+
+        &:hover 
+        {
+           border-top-color: #8c8c8c;
+           background: #8c8c8c;
+           color: #ffffff;
+        }
+
+        &:active 
+        {
+            border-top-color: #595959;
+            background: #595959;
+        }
+    }
+
+    &--center
+    {
+        padding-top: 7px;
+    }
+
+    &--hide
+    {
+        display: none;
+    }
+
+    &--submit
+    {
+        @extend %font-label;
+
+        text-align: center;
+        margin-right: $margin-default;
+
+        background: #8c8c8c;
+        background: -webkit-gradient(linear, left top, left bottom, from(#a6a6a6), to(#8c8c8c));
+        background: -webkit-linear-gradient(top, #a6a6a6, #8c8c8c);
+        background: -moz-linear-gradient(top, #a6a6a6, #8c8c8c);
+        background: -ms-linear-gradient(top, #a6a6a6, #8c8c8c);
+        background: -o-linear-gradient(top, #a6a6a6, #8c8c8c);
+        -webkit-border-radius: 0px;
+        -moz-border-radius: 0px;
+        border-radius: 0px;
+        -webkit-box-shadow: rgba(0,0,0,1) 0 1px 0;
+        -moz-box-shadow: rgba(0,0,0,1) 0 1px 0;
+        box-shadow: rgba(0,0,0,1) 0 1px 0;
+        text-shadow: rgba(0,0,0,.4) 0 1px 0;
+        color: white;
+
+        &:hover 
+        {
+           border-top-color: #8c8c8c;
+           background: #8c8c8c;
+           color: #ffffff;
+        }
+
+        &:active 
+        {
+            border-top-color: #595959;
+            background: #595959;
+        }
+    }
+
+}
+
+
+
+

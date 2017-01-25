@@ -1,0 +1,27 @@
+﻿@import 'Variables.scss';
+
+%font-default
+{
+    font-family: $font-family;
+    font-size: $font-size;
+}
+
+%font-label
+{
+    @extend %font-default;
+
+    font-weight: bold;
+}
+
+%font-data
+{
+    @extend %font-default;
+}
+
+%font-section
+{
+    @extend %font-default;
+
+    font-size: $font-section-size;
+    color: $font-section-color;
+}
